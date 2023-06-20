@@ -1,14 +1,20 @@
 <div class="navbar navbar-default">
-    <!-- By adding container fluid it occupies 100% width at all screens -->
     <div class="container-fluid">
-    
         <div class="navbar-header">
             <div class="navbar-header">
-            
+                <!-- navbar-toggler for use with our collapse plugin and other navigation toggling behaviors. -->
+                <button type="button" class="navbar-toggle" (click)="collapsed = !collapsed" >
+                    <span class="icon-bar" *ngFor="let iconBar of [1,2,3]" ></span>
+                </button>
+                <a routerLink="/" class="navbar-brand">Recipe Book</a>
             </div>
-
         </div>
-
+        <!-- .collapse.navbar-collapse for grouping and hiding navbar contents by a parent breakpoint. -->
+        <div class="navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#">Recipes</a></li>
+                <li><a href="#">Shopping List</a></li>
+            </ul>
+        </div>
     </div>
-
 </div>
